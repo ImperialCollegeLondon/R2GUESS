@@ -1,0 +1,35 @@
+PKG_CPPFLAGS = @CPPFLAGS@
+MY_LDFLAGS = @LDFLAGS@
+
+CXX_SOURCES = Classes/CM.cc \
+              Classes/Double_Matrices.cc \
+              Classes/Double_Matrices_cont.cc \
+              Classes/DR.cc \
+              Classes/g_AdMH.cc \
+              Classes/Int_Matrices.cc \
+              Classes/Int_Matrices_var_dim.cc \
+              Classes/Move_monitor.cc \
+              Classes/Prior_param.cc \
+              Classes/String_Matrices.cc \
+              Classes/Temperatures.cc \
+              Main/GUESS.cc \
+              Routines/cond_post.cc \
+              Routines/dyn_name.cc \
+              Routines/matrix_handling.cc \
+              Routines/moves.cc \
+              Routines/post_processing.cc \
+              Routines/rand.cc \
+              Routines/regression.cc \
+              Routines/xml_file_read.cc
+
+OBJ_FILES = $(CXX_SOURCES:.cc=.o) \
+            Routines/guess_math.o
+
+all: GUESS
+
+GUESS: $(OBJ_FILES)
+	$(CXX) $(LDFLAGS) -o $@ $(OBJ_FILES) $(MY_LDFLAGS)
+
+clean:
+	rm -f $(OBJ_FILES) GUESS
+
