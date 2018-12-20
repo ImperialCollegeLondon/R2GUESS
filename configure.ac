@@ -1,7 +1,7 @@
 m4_include([tools/gsl.m4])
 m4_include([tools/cula.m4])
 
-AC_INIT([R2GUESS], [1.1])
+AC_INIT([R2GUESS], [2.0])
 
 : ${R_HOME=`R RHOME`}
 if test -z "${R_HOME}"; then
