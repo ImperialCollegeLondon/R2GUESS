@@ -1,6 +1,8 @@
 example.as.ESS.object <- function(){
 path.input <- system.file("Input", package="R2GUESS")
-path.output <- system.file("Output", package="R2GUESS")
+path.output <- tempdir()
+file.copy(system.file("Output", package="R2GUESS"), path.output, recursive = TRUE)
+path.output <- file.path(path.output, "Output")
 path.par <- system.file("extdata", package="R2GUESS")
 file.par <- "Par_file_example_Hopx.xml"
 root.file.output <- "Example-GUESS-Y-Hopx"

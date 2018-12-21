@@ -1,31 +1,43 @@
 Package: R2GUESS
-Version: 1.7
-Date: 2016-01-26
 Title: Wrapper Functions for GUESS
-Authors@R: c(person("Gianluca", "Campanella",
-                    role=c("cre"), email="gianluca@campanella.org"),
-             person("Benoit", "Liquet",
-                    role="aut", email="b.liquet@uq.edu.au"),
-             person("Marc", "Chadeau-Hyam",
-                    role="aut", email="m.chadeau@imperial.ac.uk"),
-             person("Leonardo", "Bottolo",
-                    role="ctb", email="l.bottolo@imperial.ac.uk"),
-             person("Sylvia", "Richardson",
-                    role="ctb", email="sylvia.richardson@mrc-bsu.cam.ac.uk"))
-Depends: R (>= 3.0.0), fields, MCMCpack, methods, mixOmics, mvtnorm,
-        snowfall
-Description: Wrapper functions for GUESS, a GPU-enabled sparse Bayesian variable
-             selection method for linear regression based analysis of possibly
-             multivariate/correlated outcomes.
-License: GPL (>= 2)
-SystemRequirements: GNU Scientific Library (>= 1.12)
+Version: 2.0
+Authors@R:
+    c(person(given = "Gianluca",
+             family = "Campanella",
+             role = "cre",
+             email = "gianluca@campanella.org"),
+      person(given = "Benoît",
+             family = "Liquet",
+             role = "aut",
+             email = "benoit.liquet@univ-pau.fr"),
+      person(given = "Marc",
+             family = "Chadeau-Hyam",
+             role = "aut",
+             email = "m.chadeau@imperial.ac.uk"),
+      person(given = "Leonardo",
+             family = "Bottolo",
+             role = "ctb",
+             email = "lb664@cam.ac.uk"),
+      person(given = "Sylvia",
+             family = "Richardson",
+             role = "ctb",
+             email = "sylvia.richardson@mrc-bsu.cam.ac.uk"))
+Description: Wrapper functions for GUESS, a GPU-accelerated
+    sparse Bayesian variable selection method for linear regression based
+    analysis of multivariate, correlated outcomes.
+License: GPL-3
+URL: https://github.com/ImperialCollegeLondon/R2GUESS
+BugReports:
+    https://github.com/ImperialCollegeLondon/R2GUESS/issues
+Depends:
+    fields (>= 9.6),
+    MCMCpack (>= 1.4.3),
+    methods,
+    mixOmics,
+    mvtnorm (>= 1.0.7),
+    R (>= 3.0.0),
+    snowfall
+Encoding: UTF-8
+LazyData: true
 NeedsCompilation: yes
-Packaged: 2016-01-26 13:14:38 UTC; gc
-Author: Gianluca Campanella [cre],
-  Benoit Liquet [aut],
-  Marc Chadeau-Hyam [aut],
-  Leonardo Bottolo [ctb],
-  Sylvia Richardson [ctb]
-Maintainer: Gianluca Campanella <gianluca@campanella.org>
-Repository: CRAN
-Date/Publication: 2016-01-26 15:19:28
+SystemRequirements: GNU Scientific Library (>= 1.12)
